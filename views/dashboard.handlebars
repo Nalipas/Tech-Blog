@@ -1,46 +1,45 @@
 <div class="row"></div>
 <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
+    <p class="is-size-3 has-text-weight-bold has-text-centered pt-6">Welcome, {{name}}!</p>
 </div>
 </div>
 
 <div class="row mt-4">
-    <div class="col-md-6">
-        <h3>Create a New Post:</h3>
-        <button id="add-post-btn" class="btn btn-primary mb-3">Add New Post</button>
+    <div class="section has-text-centered">
+        <button id="add-post-btn" class="button is-primary mb-3">Add New Post</button>
 
-        <!-- Hidden New Post Form -->
+        <!-- New Post Form -->
         <form id="new-post-form" class="form new-post-form" style="display: none;">
-            <div class="form-group">
+            <div class="field">
                 <label for="post-name">Post Name:</label>
-                <input class="form-input" type="text" id="post-name" name="post-name" />
+                <input class="input form-input" type="text" id="post-name" name="post-name" />
             </div>
-            <div class="form-group">
+            <div class="field">
                 <label for="post-desc">Description:</label>
-                <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
+                <textarea class="input form-input textarea is-medium" id="post-desc" name="post-desc"></textarea>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="button is-primary">Create</button>
             </div>
         </form>
     </div>
 
     {{#if posts.length}}
     <div class="col-md-6 post-list">
-        <h3>Current posts:</h3>
+        <p class="is-size-4">Current posts:</p>
 
         {{#each posts as |post|}}
-        <div class="row mb-2 post" data-id="{{post.id}}">
-            <div class="col-md-8">
-                <h4 class="post-name"><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+        <div class="columns mb-6" data-id="{{post.id}}">
+            <div class="column is-four-fifths">
+                <p class="post-name is-size-5"><a href="/post/{{post.id}}">{{post.name}}</a></p>
                 <p class="post-description">{{post.description}}</p>
             </div>
-            <div class="col-md-2">
-                <button class="btn btn-sm btn-info update-button" data-id="{{post.id}}" data-name="{{post.name}}"
+            <div class="column">
+                <button class="button is-primary update-button" data-id="{{post.id}}" data-name="{{post.name}}"
                     data-description="{{post.description}}">Update</button>
             </div>
-            <div class="col-md-2">
-                <button class="btn btn-sm btn-danger" data-id="{{post.id}}">Delete</button>
+            <div class="column">
+                <button class="button is-danger delete-button " data-id="{{post.id}}">Delete</button>
             </div>
         </div>
         {{/each}}
@@ -48,21 +47,21 @@
     {{/if}}
 </div>
 
-<!-- Hidden Update Form -->
+<!-- Update Post Form -->
 <div id="update-form-container" style="display: none;">
-    <h3>Update Post:</h3>
+    <p class="is-size-4">Update Post:</p>
     <form class="form update-post-form">
         <input type="hidden" id="update-post-id" name="post-id" />
-        <div class="form-group">
+        <div class="field">
             <label for="update-post-name">Post Name:</label>
-            <input class="form-input" type="text" id="update-post-name" name="post-name" />
+            <input class="input form-input" type="text" id="update-post-name" name="post-name" />
         </div>
-        <div class="form-group">
+        <div class="field">
             <label for="update-post-desc">Description:</label>
-            <textarea class="form-input" id="update-post-desc" name="post-desc"></textarea>
+            <textarea class="textarea is-medium input form-input" id="update-post-desc" name="post-desc"></textarea>
         </div>
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary">Update</button>
+        <div class="field">
+            <button type="submit" class="button is-primary">Update</button>
         </div>
     </form>
 </div>

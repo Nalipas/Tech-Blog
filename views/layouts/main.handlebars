@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class ="has-navbar-fixed-top" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tech Spot</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn3.emoji.gg/emojis/7122-happy-pepe.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body class="has-background-grey-light">
+    <nav class="navbar is-link is-fixed-top" role="navigation" aria-label="main navigation">
+        <a class="navbar-item" href="/">
+            <span role="img" aria-label="spot">🔴</span>
+            <span id="title">The Tech Spot</span>
+        </a>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/">Home</a>
+                <a class="navbar-item" href="/dashboard">Dashboard</a>
+            </div>  
+            <div class="navbar-end">
+                {{#if logged_in}}
+                <button class="navbar-item button is-dark" id="logout">Logout</button>
+                {{else}}
+                <a class="navbar-item button is-dark" href="/login">Login</a>
+                {{/if}}
+            </div>
+        </div>
+    </nav>
+        <main class="container container-fluid mt-5">
+            <!-- Render the sub layout -->
+            {{{ body }}}
+        </main>
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>The Tech Spot</strong> by <a href="https://github.com/Nalipas">Steven Moreno</a>
+                </p>
+            </div>
+        </footer>
+
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>

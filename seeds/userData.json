@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Steven Moreno",
+        "email": "smoreno2014@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "Chad Manuel",
+        "email": "cmanuel2014@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "Andrew Chau",
+        "email": "achau2014@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "Jessica Yu",
+        "email": "jessicayu2014@gmail.com",
+        "password": "password12345"
+    }
+]

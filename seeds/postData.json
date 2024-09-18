@@ -1,0 +1,18 @@
+[
+    {
+        "name": "The Rise of AI in Everyday Life",
+        "description": "AI is reshaping our daily interactions with technology. From smart assistants like Siri to personalized recommendations, AI enhances convenience and efficiency. How will AI impact your life?"
+    },
+    {
+        "name": "Cybersecurity Best Practices for Everyone",
+        "description": "In our digital age, protecting personal information is essential. What are you doing to stay secure?"
+    },
+    {
+        "name": "The Future of Remote Work Technology",
+        "description": "Remote work is evolving, with tools like Zoom and Slack becoming staples for communication. What tools do you find most effective?"
+    },
+    {
+        "name": "The Importance of UX/UI Design in Web Development",
+        "description": "UX and UI design are crucial for web development. What are the advantages of both?"
+    }
+]
